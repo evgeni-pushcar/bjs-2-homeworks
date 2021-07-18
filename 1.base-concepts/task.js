@@ -14,12 +14,6 @@
       return "Корень только один: x1 = " + Math.round(x);
     }
 }
-  function calculateQuadraticEquation(){
-    let a = document.getElementById("a").value;
-    let b = document.getElementById("b").value;
-    let c = document.getElementById("c").value;
-    let result = solveEquation(a,b,c);
-    document.getElementById("result").textContent = result; 
-}
+
 
 
