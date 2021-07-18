@@ -1,19 +1,17 @@
 "use strict";
   function solveEquation(a,b,c){
-    let D = b**2-4*a*c;
-    let x1;
-    let x2;
-    let x;
+    const D = b**2-4*a*c;
+    let arr = [];
     if(D > 0){
-      x1 =  (-b + Math.sqrt(D))/(2*a);
-      x2 =  (-b - Math.sqrt(D))/(2*a);
-      return "Первый корень: " + Math.round(x1)+ ", Второй корень: " + Math.round(x2);
-    }else if (D < 0){ return "Корней нет";
-    }else if (D === 0){ 
-      x = -b/(2*a);
-      return "Корень только один: x1 = " + Math.round(x);
+      arr.push(-b + Math.sqrt(D))/(2*a);
+      arr.push(-b - Math.sqrt(D))/(2*a);
+        return arr;
+    }else if (D < 0){ 
+        return arr;
+    }else if (D === 0){
+      arr.push(-b/(2*a));
+        return arr;
     }
 }
-
 
 
